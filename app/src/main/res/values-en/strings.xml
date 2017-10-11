@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoginLinearLayout</string>
+    <string name="txvUser">User</string>
+    <string name="txvPassword">Password</string>
+    <string name="chkRemember">Rememrber me</string>
+    <string name="btnSignUp"><u>Sign up</u></string>
+    <string name="btnSignIn">Login</string>
+    <string name="btnGoogleSign">Login Google</string>
+    <string name="btnFacebook">Login Facebook</string>
+    <string name="txvSignIn">Sign In</string>
+    <string name="txvSignUp">Sign Up</string>
+    <string name="txvName">Name</string>
+    <string name="txvCreationDate">Creation Date</string>
+    <string name="txvDescription">Description</string>
+    <string name="btnChangeState">Change State</string>
+</resources>

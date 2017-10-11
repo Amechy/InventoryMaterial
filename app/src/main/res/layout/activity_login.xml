@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.inventory.LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/llyLogin_padding">
+
+
+    <TextView
+        android:id="@+id/txvSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/llyLogin_padding"
+        android:text="@string/txvSignIn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+    <TextView
+        android:id="@+id/txvUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/etxUser"
+        android:text="@string/txvUser"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+    <EditText
+        style="@style/LoginEditText"
+        android:id="@+id/etxUser"
+        android:background="@drawable/edt_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="@dimen/edtUser_marginBottom"
+        />
+
+    <TextView
+        android:id="@+id/txvPassword"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txvPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+    <EditText
+        style="@style/LoginEditText"
+        android:background="@drawable/edt_shape"
+        android:id="@+id/etxPassword"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:ignore="LabelFor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/llySignOptions">
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/chkRemember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="@string/chkRemember"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/darker_gray"
+
+            />
+
+        <TextView
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:text="@string/btnSignUp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:background="@color/btnFacebookSign_Color"
+        style="@style/Widget.Button.Transparent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/btnSignIn_marginBottom"
+        android:text="@string/btnSignIn" />
+
+    <Button
+
+        android:id="@+id/btnGoogleSign"
+        style="@style/Widget.Button.Transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/btnGoogleSign_MarginBottom"
+        android:background="@color/btnGoogleSign_Color"
+        android:drawableStart="@drawable/ic_google"
+        android:text="@string/btnGoogleSign" />
+
+    <Button
+        style="@style/Widget.Button.Transparent"
+        android:id="@+id/btnFacebookSign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/btnFacebookSign_Color"
+        android:drawableStart="@drawable/ic_facebook"
+        android:text="@string/btnFacebook" />
+</LinearLayout>

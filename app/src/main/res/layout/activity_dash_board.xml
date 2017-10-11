@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:columnCount="3"
+    app:orientation="horizontal"
+    android:id="@+id/gridDashBoard"
+   >
+
+
+    <!--
+
+
+    <ImageView
+        android:id="@+id/imvChair"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/chair"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/imvCpu"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/cpu"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+
+    <ImageView
+        android:id="@+id/imvKeyboard"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/keyboard"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/imvMonitor"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/monitor"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+
+    <ImageView
+        android:id="@+id/imvMouse"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/mouse"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+
+    <ImageView
+        android:id="@+id/imvPrinter"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/printer"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+
+
+
+    <ImageView
+        android:id="@+id/imvProyector"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/proyector"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+    <ImageView
+        android:id="@+id/imvTable"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/table"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+    <ImageView
+        android:id="@+id/imvWhiteboard"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/whiteboard"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/imvInventory"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/inventory"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"
+         />
+
+
+    <ImageView
+        android:id="@+id/imvCloset"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/closet"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill"/>
+    -->
+
+</android.support.v7.widget.GridLayout>

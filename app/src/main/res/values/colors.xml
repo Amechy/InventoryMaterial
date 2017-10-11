@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#546e7a</color>
+    <color name="colorPrimaryDark">#29434e</color>
+    <color name="colorAccent">#ff7043</color>
+    <color name="btnGoogleSign_Color">#E25F43</color>
+    <color name="btnFacebookSign_Color">#3B5998</color>
+    <color name="colorPrimaryLogin">#FFF</color>
+</resources>
