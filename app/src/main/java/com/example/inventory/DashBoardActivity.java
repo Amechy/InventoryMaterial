@@ -1,6 +1,7 @@
 package com.example.inventory;
 
 import android.content.Intent;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayout;
@@ -13,7 +14,7 @@ import java.util.Vector;
 public class DashBoardActivity extends AppCompatActivity {
 
     private GridLayout gridDashBoard;
-    private ClickListenerDashboard listenerDashboard;
+    //private ClickListenerDashboard listenerDashboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class DashBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board);
 
         gridDashBoard=(GridLayout)findViewById(R.id.gridDashBoard);
-         listenerDashboard = new ClickListenerDashboard();
+       //  listenerDashboard = new ClickListenerDashboard();
 
         //Definimos un array de int que contenemos las imagenes inventory, product, dependencias,secciones,preferencias.
 
@@ -56,30 +57,32 @@ public class DashBoardActivity extends AppCompatActivity {
         }
         */
 
-        ImageView imageView;
+
         int width=(int)getResources().getDimension(R.dimen.imgDashboardWidth);
         int height=(int)getResources().getDimension(R.dimen.imgDashboardHeight);
 
-
+        ImageView imageView;
         for (int i = 0;i<images.length;i++)
         {
             imageView = new ImageView(this);
-            imageView.setId();
+            imageView.setImageResource(images[i]);
+            //imageView.setId();
             GridLayout.LayoutParams params = new GridLayout.LayoutParams();
             params.width=width;
             params.height=height;
             params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
             params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
-            imageView.setImageResource(i);
+
+            //Aplicamos el params
             imageView.setLayoutParams(params);
-            imageView.setOnClickListener(listenerDashboard);
+            //imageView.setOnClickListener(listenerDashboard);
 
-
+            //Lo añadimos al GridLayout
             gridDashBoard.addView(imageView);
         }
 
     }
-    class ClickListenerDashboard implements View.OnClickListener{
+   /* class ClickListenerDashboard implements View.OnClickListener{
 
         @Override
         public void onClick(View v) {
@@ -98,4 +101,5 @@ public class DashBoardActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+    */
 }
