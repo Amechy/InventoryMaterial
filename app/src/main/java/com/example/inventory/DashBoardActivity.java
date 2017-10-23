@@ -11,10 +11,12 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.Vector;
 
+import static android.support.annotation.Dimension.DP;
+
 public class DashBoardActivity extends AppCompatActivity {
 
     private GridLayout gridDashBoard;
-    //private ClickListenerDashboard listenerDashboard;
+    private ClickListenerDashboard listenerDashboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +24,23 @@ public class DashBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board);
 
         gridDashBoard=(GridLayout)findViewById(R.id.gridDashBoard);
-       //  listenerDashboard = new ClickListenerDashboard();
+        listenerDashboard = new ClickListenerDashboard();
 
         //Definimos un array de int que contenemos las imagenes inventory, product, dependencias,secciones,preferencias.
 
         int[] images= {
-                R.drawable.chair, R.drawable.closet,R.drawable.cpu,
-                R.drawable.inventory, R.drawable.keyboard, R.drawable.monitor,
-                R.drawable.mouse, R.drawable.printer, R.drawable.proyector,
-                R.drawable.table,R.drawable.whiteboard};
+                R.drawable.producto, R.drawable.intentory,R.drawable.secciones, R.drawable.dependencias, R.drawable.preferencias
+        };
+        int[] idImages= {
+                R.id.imvProducto, R.id.imvInventory, R.id.imvSecciones, R.id.imvDependencias, R.id.imvPreferencias
+        };
+
 
         // Definir un array de ImageView o en este caso un Vector
 
         //No se utiliza en java android arrays de objetos, se utilizan vector o collecciones
         //ImageView[] imageViews = new ImageView[images.length];
-        // No utilizamos la clase vector porque no trabajamos con hilos y no se requiere sincronización
+        //No utilizamos la clase vector porque no trabajamos con hilos y no se requiere sincronización
         //Vector<ImageView> VectorImageViews = new Vector<ImageView>();
 
         //Al poner el tipo en ImageView, el arrayList se parametriza y hay un casting implicito.
@@ -66,7 +70,7 @@ public class DashBoardActivity extends AppCompatActivity {
         {
             imageView = new ImageView(this);
             imageView.setImageResource(images[i]);
-            //imageView.setId();
+            imageView.setId(idImages[i]);
             GridLayout.LayoutParams params = new GridLayout.LayoutParams();
             params.width=width;
             params.height=height;
@@ -75,31 +79,29 @@ public class DashBoardActivity extends AppCompatActivity {
 
             //Aplicamos el params
             imageView.setLayoutParams(params);
-            //imageView.setOnClickListener(listenerDashboard);
-
+            imageView.setOnClickListener(listenerDashboard);
+            imageView.setPadding(20,20,20,20);
             //Lo añadimos al GridLayout
             gridDashBoard.addView(imageView);
         }
 
     }
-   /* class ClickListenerDashboard implements View.OnClickListener{
+   class ClickListenerDashboard implements View.OnClickListener{
 
         @Override
         public void onClick(View v) {
-            Intent intent;
+            Intent intent = new Intent();
             switch (v.getId())
             {
-
-                case inventory:
+                case R.id.imvInventory:
                     intent = new Intent(DashBoardActivity.this, InventoryActivity.class);
                     break;
-
-                case product:
+                case R.id.imvProducto:
                     intent = new Intent(DashBoardActivity.this, ProductActivity.class);
                     break;
             }
             startActivity(intent);
         }
     }
-    */
+
 }

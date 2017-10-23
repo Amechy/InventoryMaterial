@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subCategorias">
+        <item>Monitor</item>
+        <item>Teclado</item>
+        <item>Raton</item>
+    </string-array>
+</resources>

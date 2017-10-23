@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="imvProducto" ></item>
+    <item type="id" name="imvInventory" ></item>
+    <item type="id" name="imvSecciones" ></item>
+    <item type="id" name="imvDependencias" ></item>
+    <item type="id" name="imvPreferencias" ></item>
+</resources>
