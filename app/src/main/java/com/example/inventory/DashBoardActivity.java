@@ -10,6 +10,7 @@ import android.widget.ImageView;
 public class DashBoardActivity extends AppCompatActivity {
     private static int INVENTORY;
     private static int PRODUCT;
+    private static int DEPENDENCY;
     private GridLayout gridDashBoard;
     private ClickListenerDashboard listenerDashboard;
     int[] images= {
@@ -96,6 +97,10 @@ public class DashBoardActivity extends AppCompatActivity {
                 PRODUCT = View.generateViewId();
                 iv.setId(PRODUCT);
                 break;
+            case R.drawable.dependencias:
+                DEPENDENCY = View.generateViewId();
+                iv.setId(DEPENDENCY);
+                break;
 
         }
     }
@@ -114,6 +119,10 @@ public class DashBoardActivity extends AppCompatActivity {
             }
             if (v.getId()==PRODUCT) {
                 intent = new Intent(DashBoardActivity.this, ProductActivity.class);
+                startActivity(intent);
+            }
+            if (v.getId()==DEPENDENCY) {
+                intent = new Intent(DashBoardActivity.this, DependencyActivity.class);
                 startActivity(intent);
             }
         }
