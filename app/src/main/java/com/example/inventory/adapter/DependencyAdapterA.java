@@ -1,4 +1,4 @@
-package com.example.inventory.pojo;
+package com.example.inventory.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.inventory.R;
+import com.example.inventory.pojo.Dependency;
+import com.example.inventory.pojo.DependencyRepository;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
 /**

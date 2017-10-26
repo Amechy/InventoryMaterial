@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
 import com.example.inventory.pojo.Dependency;
-import com.example.inventory.pojo.DependencyAdapterA;
+import com.example.inventory.adapter.DependencyAdapterA;
 
 public class DependencyActivity extends ListActivity {
 
