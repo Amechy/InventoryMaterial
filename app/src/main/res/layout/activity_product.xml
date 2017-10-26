@@ -38,7 +38,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvNombre"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toStartOf="@id/barrier2"
+                app:layout_constraintEnd_toStartOf="@id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/imvMonitor" />
@@ -54,7 +54,7 @@
                 android:text="Name"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvNombre"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvSerial"
@@ -64,7 +64,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvSerial"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvNombre" />
@@ -82,7 +82,7 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvSerial"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -101,7 +101,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvVendedor"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvSerial" />
@@ -119,7 +119,7 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvVendedor"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvModelo"
@@ -128,7 +128,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvModelo"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvVendedor" />
 
@@ -145,7 +145,7 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvModelo"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvCategoria"
@@ -154,7 +154,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvCategoria"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvModelo" />
@@ -167,7 +167,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
 
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/txvModelo">
 
             </Spinner>
@@ -179,7 +179,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvSubcategoria"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toStartOf="@+id/barrier2"
+                app:layout_constraintEnd_toStartOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoria" />
@@ -191,7 +191,7 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
 
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoria">
 
@@ -204,7 +204,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvTipo"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvSubcategoria" />
@@ -217,13 +217,13 @@
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/txvSubcategoria">
 
             </Spinner>
 
             <android.support.constraint.Barrier
-                android:id="@+id/barrier2"
+                android:id="@+id/brBarrera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:barrierDirection="left"
@@ -244,7 +244,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvDescripcion"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvTipo" />
 
@@ -256,12 +256,13 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
-                android:inputType="textUri|textLongMessage|textPersonName"
+                android:inputType="textMultiLine|textUri|textLongMessage"
                 android:singleLine="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.071"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
-                app:layout_constraintTop_toTopOf="@+id/txvDescripcion" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
+                app:layout_constraintTop_toTopOf="@+id/txvDescripcion"
+                tools:singleLine="false" />
 
 
             <TextView
@@ -271,7 +272,7 @@
                 android:text="@string/txvPrecio"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
                 app:layout_constraintBaseline_toBaselineOf="@+id/etxPrecio"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4" />
 
             <EditText
@@ -288,7 +289,7 @@
                 android:text="149€"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.08"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/etxDescripcion" />
 
             <TextView
@@ -298,7 +299,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/txvFCompra"
                 android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvPrecio" />
 
@@ -316,7 +317,7 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvFCompra"
                 app:layout_constraintEnd_toEndOf="@+id/etxPrecio"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvUrl"
@@ -364,7 +365,7 @@
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
-                android:inputType="textLongMessage|textPersonName"
+                android:inputType="textMultiLine|textLongMessage"
                 android:text=""
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
