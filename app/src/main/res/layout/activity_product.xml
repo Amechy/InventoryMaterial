@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context="com.example.inventory.ProductActivity"
-    tools:layout_editor_absoluteY="25dp">
+>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -39,16 +36,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="8dp"
-                android:text="Nombre:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toStartOf="@id/barrier2"
+                android:text="@string/txvNombre"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toStartOf="@id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/imvMonitor" />
 
             <EditText
                 android:id="@+id/etxNombre"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edt_shape"
@@ -56,28 +53,25 @@
                 android:inputType="textPersonName"
                 android:text="Name"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvNombre"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvSerial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-
                 android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Serial:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                android:text="@string/txvSerial"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvNombre" />
 
             <EditText
                 android:id="@+id/etxSerial"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
                 android:layout_marginEnd="8dp"
@@ -86,9 +80,18 @@
                 android:inputType="textPersonName"
                 android:text="Serial"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvSerial"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="43dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etxNombre"
+                app:srcCompat="@drawable/codigoqr" />
 
             <TextView
                 android:id="@+id/txvVendedor"
@@ -96,16 +99,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Vendedor: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                android:text="@string/txvVendedor"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvSerial" />
 
             <EditText
                 android:id="@+id/etxVendedor"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
                 android:layout_marginEnd="8dp"
@@ -114,24 +117,24 @@
                 android:inputType="textUri|textPersonName"
                 android:text="Vendedor"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvVendedor"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvModelo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Modelo: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                android:text="@string/txvModelo"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvVendedor" />
 
             <EditText
                 android:id="@+id/etxModelo"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
                 android:layout_marginEnd="8dp"
@@ -140,31 +143,31 @@
                 android:inputType="textPersonName"
                 android:text="Modelo"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvModelo"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvCategoria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Categoria: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                android:text="@string/txvCategoria"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvModelo" />
 
             <Spinner
                 android:id="@+id/spnCategorias"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
 
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/txvModelo">
 
             </Spinner>
@@ -174,21 +177,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="SubCategoria: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toStartOf="@+id/barrier2"
+                android:text="@string/txvSubcategoria"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toStartOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoria" />
 
             <Spinner
                 android:id="@+id/spnSubCategorias"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
 
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoria">
 
@@ -199,27 +202,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Tipo: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                android:text="@string/txvTipo"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvSubcategoria" />
 
             <Spinner
                 android:id="@+id/spnTipo"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/txvSubcategoria">
 
             </Spinner>
 
             <android.support.constraint.Barrier
-                android:id="@+id/barrier2"
+                android:id="@+id/brBarrera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:barrierDirection="left"
@@ -238,9 +242,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Descripcion: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                android:text="@string/txvDescripcion"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvTipo" />
 
@@ -252,22 +256,23 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
-                android:inputType="textUri|textPersonName"
+                android:inputType="textMultiLine|textUri|textLongMessage"
                 android:singleLine="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.071"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
-                app:layout_constraintTop_toTopOf="@+id/txvDescripcion" />
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
+                app:layout_constraintTop_toTopOf="@+id/txvDescripcion"
+                tools:singleLine="false" />
 
 
             <TextView
                 android:id="@+id/txvPrecio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Precio: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/txvPrecio"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
                 app:layout_constraintBaseline_toBaselineOf="@+id/etxPrecio"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4" />
 
             <EditText
@@ -284,7 +289,7 @@
                 android:text="149€"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.08"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/etxDescripcion" />
 
             <TextView
@@ -292,9 +297,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="F.Compra: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                android:text="@string/txvFCompra"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                app:layout_constraintEnd_toEndOf="@+id/brBarrera"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvPrecio" />
 
@@ -310,29 +315,27 @@
                 android:inputType="textPersonName"
                 android:text="12/05/2016"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvFCompra"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
-                app:layout_constraintStart_toEndOf="@+id/barrier2" />
+                app:layout_constraintEnd_toEndOf="@+id/etxPrecio"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
             <TextView
                 android:id="@+id/txvUrl"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Url: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/txvUrl"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
 
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvFCompra" />
 
             <EditText
                 android:id="@+id/etxUrl"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-
+                android:layout_marginStart="16dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -346,36 +349,33 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Notas: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/txvNotas"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
 
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/txvUrl" />
 
             <EditText
                 android:id="@+id/etxNotas"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="120dp"
 
                 android:layout_marginBottom="24dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
 
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
-
-                android:inputType="textPersonName"
+                android:inputType="textMultiLine|textLongMessage"
                 android:text=""
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
-                app:layout_constraintStart_toEndOf="@+id/barrier2"
-                app:layout_constraintTop_toBottomOf="@+id/etxUrl" />
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txvNotas"
+                app:layout_constraintVertical_bias="1.0" />
 
 
         </android.support.constraint.ConstraintLayout>
 
     </ScrollView>
-
-</LinearLayout>
 

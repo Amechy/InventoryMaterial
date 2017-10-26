@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LoginLinearLayout</string>
+    <string name="app_name">Layout</string>
     <string name="txvUser">User</string>
     <string name="txvPassword">Password</string>
-    <string name="chkRemember">Rememrber me</string>
+    <string name="chkRemember">Remember me</string>
     <string name="btnSignUp"><u>Sign up</u></string>
     <string name="btnSignIn">Login</string>
     <string name="btnGoogleSign">Login Google</string>
@@ -14,4 +14,14 @@
     <string name="txvCreationDate">Creation Date</string>
     <string name="txvDescription">Description</string>
     <string name="btnChangeState">Change State</string>
+    <string name="txvNombre">"Name: "</string>
+    <string name="txvVendedor">"Seller: "</string>
+    <string name="txvModelo">"Model: "</string>
+    <string name="txvCategoria">"Category: "</string>
+    <string name="txvSubcategoria">"Subcategory: "</string>
+    <string name="txvTipo">"Type: "</string>
+    <string name="txvDescripcion">"Description: "</string>
+    <string name="txvPrecio">"Price: "</string>
+    <string name="txvFCompra">"Purch. Date: "</string>
+    <string name="txvNotas">"Notes: "</string>
 </resources>
