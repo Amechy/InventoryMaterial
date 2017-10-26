@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Created by usuario on 26/10/17.
+ * @author Alejandro Mechiné
+ * Clase utilizada para anadir dependencias.
  */
 
 public class DependencyRepository {

@@ -7,6 +7,13 @@ import android.support.v7.widget.GridLayout;
 import android.view.View;
 import android.widget.ImageView;
 
+/**
+ * Clase que se encarga de rellenar el gridLayout del dashboard y lanzar cada activity según la que se pulse.
+ * @author Alejandro Mechiné
+ *
+ */
+
+
 public class DashBoardActivity extends AppCompatActivity {
     private static int INVENTORY;
     private static int PRODUCT;
@@ -63,7 +70,12 @@ public class DashBoardActivity extends AppCompatActivity {
         int width=(int)getResources().getDimension(R.dimen.imgDashboardWidth);
         int height=(int)getResources().getDimension(R.dimen.imgDashboardHeight);
 
+
+
         ImageView imageView;
+        /**
+         * Con este bucle vamos creando cada imagen y la vamos anadiendo al Gridlayout
+         */
         for (int i = 0;i<images.length;i++)
         {
             imageView = new ImageView(this);
@@ -86,6 +98,13 @@ public class DashBoardActivity extends AppCompatActivity {
 
 
     }
+
+    /**
+     * Método que genera un id único para cada imagen
+     * @param i
+     * @param iv
+     */
+
     private void GenerateId(int i, ImageView iv) {
         switch(images[i]){
             case R.drawable.inventory:
@@ -106,7 +125,9 @@ public class DashBoardActivity extends AppCompatActivity {
     }
 
 
-
+/**
+ *  Con esta clase hacemos que al pulsar las imágenes, se abra la actividad correspondiente a cada una de ellas.
+ */
    class ClickListenerDashboard implements View.OnClickListener{
 
         @Override

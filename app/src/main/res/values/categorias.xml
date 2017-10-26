@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Categorías para el spinner Categorias del Layout Product-->
 <resources>
+
         <string-array name="categorias">
             <item>Periferico</item>
             <item>Otra</item>

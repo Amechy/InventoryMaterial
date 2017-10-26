@@ -2,6 +2,9 @@ package com.example.inventory.pojo;
 
 /**
  * Created by usuario on 25/10/17.
+ * @author Alejandro Mechiné
+ * Clase que emula una dependencia en la vida real. Almacenando los campos que contiene. A partir
+ * de él crearemos las distintas dependencia.
  */
 
 public class Dependency {

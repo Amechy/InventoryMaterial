@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Tipos de producto para el spinner Tipo del Layout Product-->
 <resources>
     <string-array name="tipoProducto">
         <item>Inventariable</item>
         <item>No inventariables</item>
-
     </string-array>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Layout</string>
+    <string name="app_name">Inventory</string>
     <string name="txvUser">User</string>
     <string name="txvPassword">Password</string>
     <string name="chkRemember">Remember me</string>

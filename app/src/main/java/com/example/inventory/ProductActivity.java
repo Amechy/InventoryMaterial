@@ -5,6 +5,12 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+
+/**
+ * Clase que gestiona los datos de la interfaz de producto.
+ * @autor Alejandro Mechiné
+ *
+ */
 public class ProductActivity extends AppCompatActivity {
 
     Spinner spnCategorias, spnSubCategorias, spnTipo;
@@ -18,7 +24,9 @@ public class ProductActivity extends AppCompatActivity {
         spnTipo = (Spinner) findViewById(R.id.spnTipo);
 
 
-
+        /**
+         * Para los spinner, necesitamos un ArrayAdapter para que nos infle los datos del array en la vista.
+         */
         ArrayAdapter<CharSequence> adpCategoria = ArrayAdapter.createFromResource(this,
                 R.array.categorias, android.R.layout.simple_spinner_item);
 

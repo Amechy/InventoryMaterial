@@ -25,6 +25,7 @@
                 android:layout_height="139dp"
 
                 android:layout_marginTop="16dp"
+                android:contentDescription="Imagen de producto"
                 android:scaleType="fitStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +45,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imvMonitor" />
 
             <EditText
+                android:paddingLeft="8dp"
                 android:id="@+id/etxNombre"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -51,7 +53,7 @@
                 android:background="@drawable/edt_shape"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
+
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvNombre"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintStart_toEndOf="@+id/brBarrera" />
@@ -73,12 +75,13 @@
                 android:id="@+id/etxSerial"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
 
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Serial"
+
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvSerial"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -89,6 +92,7 @@
                 android:layout_width="43dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="8dp"
+                android:contentDescription="CodigoQr"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etxNombre"
                 app:srcCompat="@drawable/codigoqr" />
@@ -110,12 +114,11 @@
                 android:id="@+id/etxVendedor"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
+                android:paddingLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
                 android:inputType="textUri|textPersonName"
-                android:text="Vendedor"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvVendedor"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -136,12 +139,11 @@
                 android:id="@+id/etxModelo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
+                android:paddingLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Modelo"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvModelo"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -163,10 +165,11 @@
                 android:id="@+id/spnCategorias"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
 
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/txvModelo">
 
@@ -188,11 +191,12 @@
                 android:id="@+id/spnSubCategorias"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/brBarrera"
-
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoria">
 
             </Spinner>
@@ -213,8 +217,9 @@
                 android:id="@+id/spnTipo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
 
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/brBarrera"
@@ -228,7 +233,7 @@
                 android:layout_height="wrap_content"
                 app:barrierDirection="left"
                 app:layout_constraintStart_toEndOf="@id/txvSubcategoria"
-                tools:layout_editor_absoluteX="74dp" />
+                 />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline4"
@@ -250,19 +255,20 @@
 
             <EditText
                 android:id="@+id/etxDescripcion"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="120dp"
-
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/edt_shape"
-                android:ems="10"
-                android:inputType="textMultiLine|textUri|textLongMessage"
-                android:singleLine="false"
+                android:paddingLeft="8dp"
+                android:paddingTop="2dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.071"
                 app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toTopOf="@+id/txvDescripcion"
-                tools:singleLine="false" />
+                />
 
 
             <TextView
@@ -277,18 +283,18 @@
 
             <EditText
                 android:id="@+id/etxPrecio"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
-                android:layout_marginEnd="8dp"
+                android:paddingLeft="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
 
                 android:inputType="textPersonName"
-                android:text="149€"
+
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/brBarrera"
                 app:layout_constraintTop_toBottomOf="@+id/etxDescripcion" />
 
@@ -305,17 +311,17 @@
 
             <EditText
                 android:id="@+id/etxFCompra"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
-                android:layout_marginEnd="8dp"
+                android:paddingLeft="8dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
 
-                android:inputType="textPersonName"
-                android:text="12/05/2016"
+                android:inputType="date"
+
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvFCompra"
-                app:layout_constraintEnd_toEndOf="@+id/etxPrecio"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/brBarrera" />
 
@@ -334,14 +340,15 @@
                 android:id="@+id/etxUrl"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
+                android:paddingLeft="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="http://www.lg.com"
+
+                android:inputType="textUri"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txvUrl"
-                app:layout_constraintEnd_toEndOf="@+id/etxFCompra"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/txvUrl" />
 
             <TextView
@@ -358,15 +365,14 @@
             <EditText
                 android:id="@+id/etxNotas"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
-
+                android:layout_height="160dp"
                 android:layout_marginBottom="24dp"
-
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/edt_shape"
                 android:ems="10"
-                android:inputType="textMultiLine|textLongMessage"
-                android:text=""
+                android:gravity="top"
+                android:paddingLeft="8dp"
+                android:paddingTop="2dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

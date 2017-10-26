@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Subcategorías para el spinner subcategorias del Layout Product-->
 <resources>
     <string-array name="subCategorias">
         <item>Monitor</item>

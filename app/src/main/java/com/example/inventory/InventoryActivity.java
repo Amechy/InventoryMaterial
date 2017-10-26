@@ -3,6 +3,11 @@ package com.example.inventory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * @author Alejandro Mechiné
+ * @version 1.0
+ *
+ */
 public class InventoryActivity extends AppCompatActivity {
 
     @Override
