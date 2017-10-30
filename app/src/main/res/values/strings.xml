@@ -26,4 +26,7 @@
     <string name="txvFCompra">F.Compra:</string>
     <string name="txvUrl" translatable="false">Url:</string>
     <string name="txvNotas">Notas:</string>
+    <string name="txvSectorName">Nombre</string>
+    <string name="txvSectorDefault">default</string>
+    <string name="menu_save">menu_save</string>
 </resources>

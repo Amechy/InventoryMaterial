@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.inventory.R;
 import com.example.inventory.pojo.Dependency;
-import com.example.inventory.pojo.DependencyRepository;
+import com.example.inventory.DependencyRepository;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
 /**

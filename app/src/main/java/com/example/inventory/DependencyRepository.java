@@ -1,4 +1,6 @@
-package com.example.inventory.pojo;
+package com.example.inventory;
+
+import com.example.inventory.pojo.Dependency;
 
 import java.util.ArrayList;
 

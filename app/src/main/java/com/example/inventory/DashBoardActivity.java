@@ -18,6 +18,7 @@ public class DashBoardActivity extends AppCompatActivity {
     private static int INVENTORY;
     private static int PRODUCT;
     private static int DEPENDENCY;
+    private static int SECTOR;
     private GridLayout gridDashBoard;
     private ClickListenerDashboard listenerDashboard;
     int[] images= {
@@ -120,6 +121,10 @@ public class DashBoardActivity extends AppCompatActivity {
                 DEPENDENCY = View.generateViewId();
                 iv.setId(DEPENDENCY);
                 break;
+            case R.drawable.secciones:
+                SECTOR = View.generateViewId();
+                iv.setId(SECTOR);
+                break;
 
         }
     }
@@ -144,6 +149,10 @@ public class DashBoardActivity extends AppCompatActivity {
             }
             if (v.getId()==DEPENDENCY) {
                 intent = new Intent(DashBoardActivity.this, DependencyActivity.class);
+                startActivity(intent);
+            }
+            if (v.getId()==SECTOR) {
+                intent = new Intent(DashBoardActivity.this, SectorActivity.class);
                 startActivity(intent);
             }
         }
