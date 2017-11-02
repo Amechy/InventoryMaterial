@@ -86,11 +86,7 @@ public class SectorAdapter extends RecyclerView.Adapter<SectorAdapter.SectorView
             txvName = (TextView)itemView.findViewById(R.id.txvSectorName);
             swtEnabled = (Switch)itemView.findViewById(R.id.swtEnabled);
             txvSectorDefault =  (TextView)itemView.findViewById(R.id.txvSectorDefault);
-
         }
-
-
-
     }
 
     /**
