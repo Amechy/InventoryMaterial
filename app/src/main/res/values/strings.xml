@@ -29,5 +29,8 @@
     <string name="txvSectorName">Nombre</string>
     <string name="txvSectorDefault">default</string>
     <string name="action_save">menu_save</string>
+    <string name="tieName">Escriba el nombre</string>
+    <string name="tieSurname">Escriba el nombre corto</string>
+    <string name="tieDescription">Escriba la descripcion</string>
 
 </resources>

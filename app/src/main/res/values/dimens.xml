@@ -14,6 +14,10 @@
     <dimen name="list_top_padding">8dp</dimen>
     <dimen name="list_primary_text">16dp</dimen>
     <dimen name="list_secondary_text">8dp</dimen>
+    <dimen name="floatingButtonEndMargin">16dp</dimen>
+    <dimen name="floatingButtonBottomMargin">16dp</dimen>
+    <dimen name="floatingButtonElevation">6dp</dimen>
+    <dimen name="floatingButtonPressedTranslationZ">12dp</dimen>
 
 
 </resources>

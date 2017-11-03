@@ -1,7 +1,6 @@
-package com.example.inventory;
+package com.example.inventoryMaterial;
 
 import android.preference.PreferenceActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class generalSettingActivity extends PreferenceActivity{

@@ -1,8 +1,7 @@
-package com.example.inventory.adapter;
+package com.example.inventoryMaterial.adapter;
 
 
 import android.content.Context;
-import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +10,9 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.example.inventory.R;
-import com.example.inventory.SectorRepository;
-import com.example.inventory.pojo.Sector;
+import com.example.inventoryMaterial.R;
+import com.example.inventoryMaterial.SectorRepository;
+import com.example.inventoryMaterial.pojo.Sector;
 
 import java.util.ArrayList;
 
