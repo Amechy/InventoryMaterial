@@ -1,8 +1,9 @@
-package com.example.inventoryMaterial;
+package com.example.inventoryMaterial.data.db.repository;
 
 import com.example.inventoryMaterial.pojo.Dependency;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by usuario on 26/10/17.
@@ -79,6 +80,10 @@ public class DependencyRepository {
         dependencies.add(dependency);
     }
     public ArrayList<Dependency> getDependencies(){
+        /**
+         * El arrayList se ordena segun el criterio del métodos compareTo de la interfaz compare.
+         */
+        Collections.sort(dependencies);
         return dependencies;
     }
 }

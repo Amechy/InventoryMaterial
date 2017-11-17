@@ -11,7 +11,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.inventoryMaterial.R;
-import com.example.inventoryMaterial.SectorRepository;
+import com.example.inventoryMaterial.data.db.repository.SectorRepository;
 import com.example.inventoryMaterial.pojo.Sector;
 
 import java.util.ArrayList;

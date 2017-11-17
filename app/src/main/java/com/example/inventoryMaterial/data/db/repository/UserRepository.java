@@ -1,6 +1,5 @@
-package com.example.inventoryMaterial;
+package com.example.inventoryMaterial.data.db.repository;
 
-import com.example.inventoryMaterial.pojo.Sector;
 import com.example.inventoryMaterial.pojo.User;
 
 import java.util.ArrayList;
@@ -44,5 +43,14 @@ public class UserRepository {
     }
     public ArrayList<User> getUsers(){
         return users;
+    }
+
+    /**
+     * Método que comprueba si el usuario está duplicado.
+     * @return
+     * @param user
+     */
+    public boolean isUserExists(User user){
+        return true;
     }
 }

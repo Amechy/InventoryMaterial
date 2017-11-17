@@ -1,4 +1,4 @@
-package com.example.inventoryMaterial;
+package com.example.inventoryMaterial.data.db.repository;
 
 import com.example.inventoryMaterial.pojo.Sector;
 

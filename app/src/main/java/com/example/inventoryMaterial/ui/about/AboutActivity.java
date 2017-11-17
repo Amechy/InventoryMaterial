@@ -1,9 +1,10 @@
-package com.example.inventoryMaterial;
+package com.example.inventoryMaterial.ui.about;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
+import com.example.inventoryMaterial.R;
 import com.vansuita.materialabout.builder.AboutBuilder;
 import com.vansuita.materialabout.views.AboutView;
 

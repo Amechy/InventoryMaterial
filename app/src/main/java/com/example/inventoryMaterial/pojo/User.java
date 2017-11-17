@@ -13,6 +13,25 @@ public class User {
     private boolean isRoot;
     private boolean isManager;
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user1 = (User) o;
+
+        if (!user.equals(user1.user)) return false;
+        return email.equals(user1.email);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = user.hashCode();
+        result = 31 * result + email.hashCode();
+        return result;
+    }
+
     public User(int _ID, String user, String password, String name, String email, boolean isRoot, boolean isManager) {
         this._ID = _ID;
         this.user = user;

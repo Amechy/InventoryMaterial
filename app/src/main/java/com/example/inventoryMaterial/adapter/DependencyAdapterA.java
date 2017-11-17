@@ -11,8 +11,10 @@ import android.widget.TextView;
 
 import com.example.inventoryMaterial.R;
 import com.example.inventoryMaterial.pojo.Dependency;
-import com.example.inventoryMaterial.DependencyRepository;
+import com.example.inventoryMaterial.data.db.repository.DependencyRepository;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
+
+import java.util.ArrayList;
 
 /**
  * Created by usuario on 26/10/17.
@@ -20,7 +22,8 @@ import com.github.ivbaranov.mli.MaterialLetterIcon;
 
 public class DependencyAdapterA extends ArrayAdapter<Dependency> {
     public DependencyAdapterA(@NonNull Context context) {
-        super(context, R.layout.item_dependency, DependencyRepository.getInstance().getDependencies());
+        super(context, R.layout.item_dependency, new ArrayList<Dependency>(DependencyRepository.getInstance().getDependencies()));
+        sort(new Dependency.DependenctOrderByShortName());
     }
 
     @NonNull
