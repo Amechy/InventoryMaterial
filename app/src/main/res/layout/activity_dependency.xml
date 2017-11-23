@@ -7,33 +7,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.inventoryMaterial.DependencyActivity">
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_scrollFlags="scroll|enterAlways" />
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/coordinatorDependency"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:layout_scrollFlags="scroll|enterAlways" />
-        </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
 
-            >
+
+
 
             <ListView
                 android:nestedScrollingEnabled="true"
@@ -44,7 +36,6 @@
                 />
 
 
-        </android.support.v4.widget.NestedScrollView>
 
 
         <android.support.design.widget.FloatingActionButton
