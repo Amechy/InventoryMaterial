@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.inventoryMaterial.ui.dependency.DependencyActivity;
+
 /**
  * Clase que se encarga de rellenar el gridLayout del dashboard y lanzar cada activity según la que se pulse.
  * @author Alejandro Mechiné
