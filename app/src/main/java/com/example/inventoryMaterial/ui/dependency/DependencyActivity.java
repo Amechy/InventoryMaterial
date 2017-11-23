@@ -8,28 +8,34 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.example.inventoryMaterial.ui.base.BaseActivity;
 import com.example.inventoryMaterial.ui.dependency.contract.AddEditDependencyContract;
+import com.example.inventoryMaterial.ui.dependency.contract.DetailDependencyContract;
 import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContract;
+import com.example.inventoryMaterial.ui.dependency.presenter.AddEditPresenter;
+import com.example.inventoryMaterial.ui.dependency.presenter.ListPresenter;
 
 /**
  * @author Alejandro mechiné
  */
-public class DependencyActivity extends BaseActivity implements ListDependency.ListDependencyListener{
+public class DependencyActivity extends BaseActivity implements ListDependency.ListDependencyListener,DetailDependency.DetailDependencyListener{
 
     private ListDependency listDependency;
     private ListDependencyContract.Presenter listPresenter;
 
-    private Fragment addEditDependency;
+    private AddEditDependency addEditDependency;
     private AddEditDependencyContract.Presenter addEditPresenter;
 
-    private Fragment detailDependency;
+    private DetailDependency detailDependency;
+    private DetailDependencyContract.Presenter detailPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         listDependency=(ListDependency) fragmentManager.findFragmentByTag(ListDependency.TAG);
-        if (listDependency != null){
+        if (listDependency == null){
             listDependency = (ListDependency) ListDependency.newInstance(null);
             fragmentTransaction.add(android.R.id.content,listDependency);
             fragmentTransaction.commit();
@@ -49,15 +55,37 @@ public class DependencyActivity extends BaseActivity implements ListDependency.L
     public void addNewDependency() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        addEditDependency=(AddEditDependency) fragmentManager.findFragmentByTag(ListDependency.TAG);
-        if (addEditDependency != null){
-            listDependency = (ListDependency) ListDependency.newInstance(null);
-            fragmentTransaction.replace(android.R.id.content,listDependency);
+        addEditDependency=(AddEditDependency) fragmentManager.findFragmentByTag(AddEditDependency.TAG);
+        if (addEditDependency== null){
+            addEditDependency = (AddEditDependency) addEditDependency.newInstance(null);
+            fragmentTransaction.replace(android.R.id.content,addEditDependency);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
 
         addEditPresenter = new AddEditPresenter(addEditDependency);
+        addEditDependency.setPresenter(addEditPresenter);
 
+    }
+
+    @Override
+    public void editDependency(int item) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        addEditDependency = (AddEditDependency)fragmentManager.findFragmentByTag(AddEditDependency.TAG);
+        if (addEditDependency == null)
+        {
+        }
+    }
+
+
+    @Override
+    public void showDependencyDetails() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        detailDependency = (DetailDependency)fragmentManager.findFragmentByTag(DetailDependency.TAG);
+        if (detailDependency == null){
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.inventoryMaterial.ui.dependency;
+package com.example.inventoryMaterial.ui.dependency.presenter;
 
 import com.example.inventoryMaterial.ui.dependency.contract.AddEditDependencyContract;
 import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContract;
@@ -9,8 +9,9 @@ import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContra
 
 public class AddEditPresenter implements AddEditDependencyContract.Presenter {
     AddEditDependencyContract.View view;
-    public AddEditPresenter(AddEditDependencyContract.View view){
+
+    public AddEditPresenter (AddEditDependencyContract.View view)
+    {
         this.view = view;
     }
-
 }

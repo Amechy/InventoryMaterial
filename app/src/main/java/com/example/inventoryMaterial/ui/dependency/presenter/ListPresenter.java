@@ -1,4 +1,4 @@
-package com.example.inventoryMaterial.ui.dependency;
+package com.example.inventoryMaterial.ui.dependency.presenter;
 
 import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContract;
 

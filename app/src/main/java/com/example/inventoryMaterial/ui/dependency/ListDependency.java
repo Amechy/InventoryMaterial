@@ -20,31 +20,30 @@ import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContra
  */
 
 public class ListDependency extends ListFragment implements ListDependencyContract.View{
+
     public static final String TAG = "listdependency";
+
     ListDependencyContract.Presenter presenter;
     private ListDependencyListener callback;
 
     interface ListDependencyListener{
         void addNewDependency();
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            callback.addNewDependency();
-        }catch (ClassCastException e){
-            throw new ClassCastException(getActivity().getLocalClassName() + " must be implemented");
-        }
+        void editDependency(int item);
     }
 
     public static ListDependency newInstance(Bundle arguments){
+
         ListDependency listDependency = new ListDependency();
+
         if (arguments != null){
             listDependency.setArguments(arguments);
         }
         return listDependency;
     }
+
+
+
+
 
     @Nullable
     @Override
@@ -66,6 +65,17 @@ public class ListDependency extends ListFragment implements ListDependencyContra
         return rootView;
     }
 
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            callback = (ListDependencyListener) activity;
+        }catch (ClassCastException e){
+            throw new ClassCastException(getActivity().getLocalClassName() + " must be implemented");
+        }
+    }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -74,6 +84,6 @@ public class ListDependency extends ListFragment implements ListDependencyContra
 
     @Override
     public void setPresenter(ListDependencyContract.Presenter presenter) {
-        presenter = this.presenter;
+        this.presenter = presenter;
     }
 }
