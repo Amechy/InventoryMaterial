@@ -6,32 +6,55 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.inventoryMaterial.R;
 import com.example.inventoryMaterial.adapter.DependencyAdapterA;
+import com.example.inventoryMaterial.pojo.Dependency;
+import com.example.inventoryMaterial.ui.base.BasePresenter;
+import com.example.inventoryMaterial.ui.base.BaseView;
+import com.example.inventoryMaterial.ui.dependency.contract.AddEditDependencyContract;
 import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContract;
+
+import java.util.List;
 
 /**
  * Created by usuario on 23/11/17.
  */
 
-public class ListDependency extends ListFragment implements ListDependencyContract.View{
+public class ListDependency extends ListFragment implements  ListDependencyContract.View, AddEditDependency.AddNewDependencyClickListener{
 
     public static final String TAG = "listdependency";
 
-    ListDependencyContract.Presenter presenter;
+    DependencyAdapterA adapter;
+    private ListDependencyContract.Presenter presenter;
     private ListDependencyListener callback;
 
+    @Override
+    public void setPresenter(BasePresenter presenter) {
+        this.presenter = (ListDependencyContract.Presenter) presenter;
+    }
     interface ListDependencyListener{
         void addNewDependency();
-        void editDependency(int item);
+
     }
 
-    public static ListDependency newInstance(Bundle arguments){
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            callback = (ListDependencyListener) activity;
+        }catch (ClassCastException e){
+            throw new ClassCastException(getActivity().getLocalClassName() + " must be implemented");
+        }
+    }
+
+    public static Fragment newInstance(Bundle arguments){
 
         ListDependency listDependency = new ListDependency();
 
@@ -42,6 +65,16 @@ public class ListDependency extends ListFragment implements ListDependencyContra
     }
 
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        this.adapter = new DependencyAdapterA(getActivity());
+        setRetainInstance(true);
+    }
+
+    public ListDependency() {
+
+    }
 
 
 
@@ -62,28 +95,42 @@ public class ListDependency extends ListFragment implements ListDependencyContra
             }
 
         });
+        presenter.loadDependency();
         return rootView;
     }
 
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            callback = (ListDependencyListener) activity;
-        }catch (ClassCastException e){
-            throw new ClassCastException(getActivity().getLocalClassName() + " must be implemented");
-        }
-    }
-
+    /**
+     * Este metodo se asigna el adapter vacio sin datos.
+     * @param view
+     * @param savedInstanceState
+     */
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setListAdapter(new DependencyAdapterA(getActivity()));
+
+        setListAdapter(adapter);
+
+
+        Log.d(TAG,"ListDependency: OnViewCreated");
     }
 
+
     @Override
-    public void setPresenter(ListDependencyContract.Presenter presenter) {
-        this.presenter = presenter;
+    public void returnToDependencyList() {
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.popBackStack();
     }
+
+
+
+
+
+
+
+   @Override
+    public void showDependency(List<Dependency> list){
+        adapter.clear();
+        adapter.addAll(list);
+    }
+
 }

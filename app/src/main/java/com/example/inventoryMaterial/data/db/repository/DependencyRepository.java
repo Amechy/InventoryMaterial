@@ -17,6 +17,7 @@ public class DependencyRepository {
     private ArrayList<Dependency> dependencies;
     private static DependencyRepository dependencyRepository;
 
+
     /* Inicializar todos los atributos de ámbito estático o de clase */
     static {
         dependencyRepository = new DependencyRepository();
@@ -85,5 +86,19 @@ public class DependencyRepository {
          */
         Collections.sort(dependencies);
         return dependencies;
+    }
+
+    public boolean dependencyExists(String nombre, String shortName, String description){
+        boolean existe = false;
+        for (int i = 0; i < this.dependencies.size(); i++) {
+            if (getDependencies().get(i).getName() == nombre){
+                existe = true;
+            }
+            if (getDependencies().get(i).getShortname() == shortName){
+                existe = true;
+            }
+
+        }
+        return existe;
     }
 }

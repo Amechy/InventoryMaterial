@@ -16,8 +16,7 @@ import com.example.inventoryMaterial.ui.dependency.presenter.ListPresenter;
 /**
  * @author Alejandro mechiné
  */
-public class DependencyActivity extends BaseActivity implements ListDependency.ListDependencyListener,DetailDependency.DetailDependencyListener{
-
+public class DependencyActivity extends BaseActivity implements ListDependency.ListDependencyListener{
     private ListDependency listDependency;
     private ListDependencyContract.Presenter listPresenter;
 
@@ -36,8 +35,9 @@ public class DependencyActivity extends BaseActivity implements ListDependency.L
 
         listDependency=(ListDependency) fragmentManager.findFragmentByTag(ListDependency.TAG);
         if (listDependency == null){
+
             listDependency = (ListDependency) ListDependency.newInstance(null);
-            fragmentTransaction.add(android.R.id.content,listDependency);
+            fragmentTransaction.add(android.R.id.content,listDependency, ListDependency.TAG);
             fragmentTransaction.commit();
         }
 
@@ -58,17 +58,20 @@ public class DependencyActivity extends BaseActivity implements ListDependency.L
         addEditDependency=(AddEditDependency) fragmentManager.findFragmentByTag(AddEditDependency.TAG);
         if (addEditDependency== null){
             addEditDependency = (AddEditDependency) addEditDependency.newInstance(null);
-            fragmentTransaction.replace(android.R.id.content,addEditDependency);
+            fragmentTransaction.replace(android.R.id.content,addEditDependency, AddEditDependency.TAG);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
 
+        // se crea el presentador y se le pasa el constructor la vista correspondiente
         addEditPresenter = new AddEditPresenter(addEditDependency);
+
+        //Asignamos el presenter a la vista.
         addEditDependency.setPresenter(addEditPresenter);
 
     }
 
-    @Override
+   /* @Override
     public void editDependency(int item) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -78,14 +81,22 @@ public class DependencyActivity extends BaseActivity implements ListDependency.L
         }
     }
 
+    @Override
+    public void returnToDependencyList() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.popBackStack();
+    }
+
 
     @Override
     public void showDependencyDetails() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         detailDependency = (DetailDependency)fragmentManager.findFragmentByTag(DetailDependency.TAG);
         if (detailDependency == null){
 
         }
     }
+    */
 }

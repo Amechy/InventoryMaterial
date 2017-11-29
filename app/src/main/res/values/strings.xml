@@ -32,5 +32,6 @@
     <string name="tieName">Escriba el nombre</string>
     <string name="tieSurname">Escriba el nombre corto</string>
     <string name="tieDescription">Escriba la descripcion</string>
+    <string name="errorAddDependencyDependencyDuplicate">Dependencia duplicada</string>
 
 </resources>
