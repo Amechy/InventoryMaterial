@@ -88,17 +88,44 @@ public class DependencyRepository {
         return dependencies;
     }
 
-    public boolean dependencyExists(String nombre, String shortName, String description){
-        boolean existe = false;
-        for (int i = 0; i < this.dependencies.size(); i++) {
-            if (getDependencies().get(i).getName() == nombre){
-                existe = true;
+    public boolean validateDependency(String nombre, String shortName){
+        boolean result = true;
+        int index = 0;
+        while(index<dependencies.size()){
+            if (nombre.equals(dependencies.get(index).getName())|| shortName.equals(dependencies.get(index).getShortname())){
+                result = false;
+                index = dependencies.size();
+            }else{
+                index++;
             }
-            if (getDependencies().get(i).getShortname() == shortName){
-                existe = true;
-            }
-
         }
-        return existe;
+
+        return result;
+    }
+
+    public void editDependency(Dependency dependency){
+        int index = 0;
+
+        while (index<dependencies.size()){
+            if (dependency.get_ID() == dependencies.get(index).get_ID()){
+                dependencies.remove(index);
+                index = dependencies.size();
+            }else{
+                index++;
+            }
+        }
+    }
+
+
+    public void deleteDependency(Dependency dependency) {
+        int index = 0;
+        while (index<dependencies.size()){
+            if (dependency.get_ID()==dependencies.get(index).get_ID()){
+                dependencies.remove(index);
+                index = dependencies.size();
+            }else{
+                index++;
+            }
+        }
     }
 }

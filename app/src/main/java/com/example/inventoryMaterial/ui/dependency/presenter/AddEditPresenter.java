@@ -1,8 +1,6 @@
 package com.example.inventoryMaterial.ui.dependency.presenter;
 
 import com.example.inventoryMaterial.ui.dependency.contract.AddEditDependencyContract;
-import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContract;
-import com.example.inventoryMaterial.ui.dependency.interactor.AddEditInteractor;
 import com.example.inventoryMaterial.ui.dependency.interactor.AddEditInteractorImpl;
 
 /**

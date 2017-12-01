@@ -1,9 +1,7 @@
 package com.example.inventoryMaterial.ui.dependency.presenter;
 
 import com.example.inventoryMaterial.pojo.Dependency;
-import com.example.inventoryMaterial.ui.base.BasePresenter;
 import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContract;
-import com.example.inventoryMaterial.ui.dependency.interactor.ListDependencyInteractor;
 import com.example.inventoryMaterial.ui.dependency.interactor.ListDependencyInteractorImpl;
 
 import java.util.List;

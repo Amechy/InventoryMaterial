@@ -4,9 +4,6 @@ import android.text.TextUtils;
 
 import com.example.inventoryMaterial.data.db.repository.DependencyRepository;
 import com.example.inventoryMaterial.pojo.Dependency;
-import com.example.inventoryMaterial.ui.dependency.AddEditDependency;
-import com.example.inventoryMaterial.ui.login.LoginInteractor;
-import com.example.inventoryMaterial.ui.utils.CommonUtils;
 
 /**
  * Created by usuario on 24/11/17.

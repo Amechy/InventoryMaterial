@@ -18,5 +18,16 @@ public interface ListDependencyContract {
 
 
         void loadDependency();
+        void deleteDependency(Dependency dependency);
+    }
+    interface Interactor{
+
+        void loadDependency(OnLoadFinishedListener onLoadFinishedListener);
+        void deleteDependency(Dependency dependency, OnLoadFinishedListener listener);
+
+        interface OnLoadFinishedListener{
+            void onSuccess(List<Dependency> list);
+        }
+
     }
 }

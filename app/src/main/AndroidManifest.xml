@@ -30,7 +30,7 @@
         <activity android:name=".AccountSetting" />
         <activity android:name=".generalSettingActivity" />
         <activity android:name=".ui.about.AboutActivity" />
-        <activity android:name=".ui.dependency.AddEditDependency" />
+        <activity android:name=".ui.dependency.fragment.AddEditDependency" />
     </application>
 
 </manifest>

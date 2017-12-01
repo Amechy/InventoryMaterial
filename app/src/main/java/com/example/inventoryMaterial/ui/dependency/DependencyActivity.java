@@ -2,7 +2,6 @@ package com.example.inventoryMaterial.ui.dependency;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
@@ -10,6 +9,9 @@ import com.example.inventoryMaterial.ui.base.BaseActivity;
 import com.example.inventoryMaterial.ui.dependency.contract.AddEditDependencyContract;
 import com.example.inventoryMaterial.ui.dependency.contract.DetailDependencyContract;
 import com.example.inventoryMaterial.ui.dependency.contract.ListDependencyContract;
+import com.example.inventoryMaterial.ui.dependency.fragment.AddEditDependency;
+import com.example.inventoryMaterial.ui.dependency.fragment.DetailDependency;
+import com.example.inventoryMaterial.ui.dependency.fragment.ListDependency;
 import com.example.inventoryMaterial.ui.dependency.presenter.AddEditPresenter;
 import com.example.inventoryMaterial.ui.dependency.presenter.ListPresenter;
 
@@ -51,8 +53,10 @@ public class DependencyActivity extends BaseActivity implements ListDependency.L
     }
 
 
+
+
     @Override
-    public void addNewDependency() {
+    public void addNewDependency(Bundle bundle) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         addEditDependency=(AddEditDependency) fragmentManager.findFragmentByTag(AddEditDependency.TAG);
@@ -68,7 +72,6 @@ public class DependencyActivity extends BaseActivity implements ListDependency.L
 
         //Asignamos el presenter a la vista.
         addEditDependency.setPresenter(addEditPresenter);
-
     }
 
    /* @Override

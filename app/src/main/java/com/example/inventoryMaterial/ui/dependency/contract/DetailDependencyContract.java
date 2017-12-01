@@ -1,7 +1,5 @@
 package com.example.inventoryMaterial.ui.dependency.contract;
 
-import com.example.inventoryMaterial.ui.dependency.DetailDependency;
-
 /**
  * Created by usuario on 23/11/17.
  */

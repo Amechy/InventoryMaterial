@@ -33,5 +33,9 @@
     <string name="tieSurname">Escriba el nombre corto</string>
     <string name="tieDescription">Escriba la descripcion</string>
     <string name="errorAddDependencyDependencyDuplicate">Dependencia duplicada</string>
+    <string name="fragment_listdependency_delete">Eliminar dependencia</string>
+
+    <string name="btnOk">OK</string>
+    <string name="btnCancel">Cancelar</string>
 
 </resources>

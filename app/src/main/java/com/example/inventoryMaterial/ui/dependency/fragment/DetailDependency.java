@@ -1,8 +1,6 @@
-package com.example.inventoryMaterial.ui.dependency;
+package com.example.inventoryMaterial.ui.dependency.fragment;
 
 
-import android.app.ListFragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.example.inventoryMaterial.R;
 import com.example.inventoryMaterial.ui.dependency.contract.DetailDependencyContract;
-import com.example.inventoryMaterial.ui.dependency.presenter.DetailPresenter;
 
 /**
  * Created by usuario on 23/11/17.
